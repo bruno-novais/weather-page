@@ -39,7 +39,12 @@ export default function Home() {
 
   return (
     <main className="flex flex-col min-h-screen items-center justify-center p-4 bg-gray-900">
-
+      <Image
+        src="/weather.png"
+        alt="Imagem de Fundo"
+        width={180}
+        height={180}
+      />
       <section class="bg-white dark:bg-gray-900">
         <div class="flex flex-col space-y-8 py-8 px-4 mx-auto max-w-screen-xl text-center">
           <h1 class="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl dark:text-white">Vença o clima!</h1>
@@ -74,14 +79,14 @@ export default function Home() {
                     </div>
                   )}
                 </div>
-                
+
               </div>
               {data && (
-              <div class="flex flex-col justify-between p-6 leading-normal items-center">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Previsão atual em {data.name}</h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400 w-80">Não seja pego desprevinido, confira a previsão completa.</p>
-              </div>
-            )}
+                <div class="flex flex-col justify-between p-6 leading-normal items-center">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Previsão atual em {data.name}</h5>
+                  <p class="font-normal text-gray-700 dark:text-gray-400 w-80">Não seja pego desprevenido, confira a previsão completa.</p>
+                </div>
+              )}
             </div>
           </div>
 

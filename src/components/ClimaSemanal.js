@@ -21,7 +21,7 @@ const ClimaSemanal = ({ cidade }) => {
 
     return (
         <>
-            <div className='flex flex-row space-x-6'>
+            <div className='flex flex-row justify-between flex-wrap gap-y-6'>
                 {data.map((item, index) => (
                     <ClimaCard
                         key={index}

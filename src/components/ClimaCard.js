@@ -6,8 +6,8 @@ const ClimaCard = ({ iconUrl, name, temperature, description, minTemperature, ma
 
 
     return (
-        <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-slate-800 dark:border-gray-700 space-y-4">
-            <Image src={iconUrl} alt="Icone do clima" width={70} height={70} className='flex justify-center items-center bg-slate-700 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700' />
+        <div className="w-60 max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-slate-800 dark:border-gray-700 space-y-4">
+            <Image src={iconUrl} alt="Icone do clima" width={60} height={60} className='flex justify-center items-center bg-slate-700 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700' />
             <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{name}</h5>
             <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Temperatura: {temperature}°C</p>
             <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Descrição: {description}</p>
