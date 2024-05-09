@@ -11,8 +11,10 @@ const ClimaCard = ({ iconUrl, name, temperature, description, minTemperature, ma
             <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{name}</h5>
             <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Temperatura: {temperature}°C</p>
             <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Descrição: {description}</p>
-            <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Temperatura mínima: {minTemperature}°C</p>
-            <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Temperatura máxima: {maxTemperature}°C</p>
+
+            {/* <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Temperatura mínima: {minTemperature}°C</p>
+            <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Temperatura máxima: {maxTemperature}°C</p> */}
+
             <a href="#" className="inline-flex font-medium items-center text-blue-600 hover:underline">
                 See our guideline
                 <svg className="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
