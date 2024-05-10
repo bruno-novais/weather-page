@@ -45,12 +45,12 @@ export default function Home() {
         width={180}
         height={180}
       />
-      <section class="bg-white dark:bg-gray-900">
-        <div class="flex flex-col space-y-8 py-8 px-4 mx-auto max-w-screen-xl text-center">
-          <h1 class="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl dark:text-white">Vença o clima!</h1>
+      <section className="bg-white dark:bg-gray-900">
+        <div className="flex flex-col space-y-8 py-8 px-4 mx-auto max-w-screen-xl text-center">
+          <h1 className="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl dark:text-white">Vença o clima!</h1>
 
 
-          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Desafie a Natureza! Descubra a previsão do tempo da sua cidade e esteja preparado para qualquer clima.</p>
+          <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Desafie a Natureza! Descubra a previsão do tempo da sua cidade e esteja preparado para qualquer clima.</p>
 
 
           <div className='flex flex-row w-full justify-center'>
@@ -68,13 +68,13 @@ export default function Home() {
                       maxTemperature={data.main.temp_max}
                     />
                   ) : (
-                    <div class="flex items-center p-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
-                      <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="flex items-center p-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+                      <svg className="flexShrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
                       </svg>
-                      <span class="sr-only">Info</span>
+                      <span className="sr-only">Info</span>
                       <div>
-                        <span class="font-medium">Permita que o navegador acesse sua localização!</span>
+                        <span className="font-medium">Permita que o navegador acesse sua localização!</span>
                       </div>
                     </div>
                   )}
@@ -82,43 +82,19 @@ export default function Home() {
 
               </div>
               {data && (
-                <div class="flex flex-col justify-between p-6 leading-normal items-center">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Previsão atual em {data.name}</h5>
-                  <p class="font-normal text-gray-700 dark:text-gray-400 w-80">Não seja pego desprevenido, confira a previsão completa.</p>
+                <div className="flex flex-col justify-between p-6 leading-normal items-center">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Previsão atual em {data.name}</h5>
+                  <p className="font-normal text-gray-700 dark:text-gray-400 w-80">Não seja pego desprevenido, confira a previsão completa.</p>
                 </div>
               )}
             </div>
           </div>
 
-          {/* <div className="flex w-full items-center justify-center">
-            {data && data.name ? (
-              <ClimaCard
-                iconUrl={iconUrl}
-                name={data.name}
-                temperature={data.main.temp}
-                description={data.weather[0].description}
-                minTemperature={data.main.temp_min}
-                maxTemperature={data.main.temp_max}
-              />
-            ) : (
-              <div class="flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
-                <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                </svg>
-                <span class="sr-only">Info</span>
-                <div>
-                  <span class="font-medium">Permita que o navegador acesse sua localização!</span>
-                </div>
-              </div>
-            )}
-          </div> */}
-
-
-          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-            <a href="/clima" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+          <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+            <a href="/clima" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
               Conferir Previsão Completa
-              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+              <svg className="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
               </svg>
             </a>
           </div>
