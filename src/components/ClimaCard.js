@@ -6,21 +6,30 @@ const ClimaCard = ({ iconUrl, name, temperature, description, minTemperature, ma
 
 
     return (
-        <div className="w-60 max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-slate-800 dark:border-gray-700 space-y-4">
-            <Image src={iconUrl} alt="Icone do clima" width={60} height={60} className='flex justify-center items-center bg-slate-700 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700' />
-            <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{name}</h5>
-            <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Temperatura: {temperature}°C</p>
-            <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Descrição: {description}</p>
+        <div className="w-60 max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-slate-800 dark:border-gray-700 space-y-3">
 
-            {/* <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Temperatura mínima: {minTemperature}°C</p>
-            <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">Temperatura máxima: {maxTemperature}°C</p> */}
+            <h5 className="text-3xl font-semibold tracking-tight text-white dark:text-gray-300">{name}</h5>
 
-            <a href="https://openweathermap.org" target="_blank" className="inline-flex font-medium items-center text-blue-600 hover:underline">
-                Veja mais
-                <svg className="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
+            <div className='flex flex-row items-center justify-between'>
+                <Image src={iconUrl} alt="Icone do clima" width={60} height={60} className='flex justify-center items-center bg-slate-700 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700' />
+                <p className="font-bold text-4xl text-gray-500 dark:text-gray-300 p-4">
+                    {Math.round(temperature).toString().slice(0, 2)}°C
+                </p>
+
+            </div>
+
+            <div className="flex items-center p-2 px-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-slate-700 dark:text-blue-400" role="alert">
+                <svg className="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
                 </svg>
-            </a>
+                <span className="sr-only">Info</span>
+                <div>
+                    <span className="font-medium">{description}</span>
+                </div>
+            </div>
+
+            <p className="font-normal text-gray-500 dark:text-gray-400">Temp. mínima: {minTemperature}°C</p>
+            <p className="font-normal text-gray-500 dark:text-gray-400">Temp. máxima: {maxTemperature}°C</p>
         </div>
     );
 };
